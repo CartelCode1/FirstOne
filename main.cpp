@@ -5,8 +5,8 @@
 using namespace std;
 
 int main() {
-    string n="120";
-    int a = convertisseurStringtoInt(n);
-    cout << a << endl;
+    string l="geirzugheripgheirzgheritestgijgipdjfgipdsjgdijfgdij";
+    string c="test";
+    cout << (in(c, l)==1) << endl;
     return 0;
 }
