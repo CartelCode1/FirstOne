@@ -58,3 +58,20 @@ auto convertisseurStringtoInt(string n)
     return a;
 }
 
+bool in(string c, string l)
+{
+    int m=sizeOfString(c);
+    for(int i{0}; i<sizeOfString(l); i++){
+        if(l[i]==c[0]){
+            int j=1;
+            while(j<m && l[i+j]==c[j] && i+j<sizeOfString(l)){
+                j++;
+            }
+            if(j==m){
+                return true;
+            }
+        }
+    }
+    return false;
+}
+
