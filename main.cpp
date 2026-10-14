@@ -1,21 +1,12 @@
 #include <iostream>
-#include "Annexe.h"
+#include "Annexe.hpp"
 #include <string>
 #include <cmath>
 using namespace std;
 
 int main() {
-
-    int b;
-    b=7;
-
-    int a{0};
-    cin>>a;
-    cin.ignore();
-
-    cout<<pw(a,b)<<endl;
-
-
+    string n="120";
+    int a = convertisseurStringtoInt(n);
+    cout << a << endl;
     return 0;
-
 }
