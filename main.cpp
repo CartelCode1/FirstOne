@@ -1,15 +1,21 @@
 #include <iostream>
 #include "Annexe.h"
 #include <string>
+#include <cmath>
 using namespace std;
 
 int main() {
-    string a;
-    int b{2},c{3};
-    cin>>b;
+
+    int b;
+    b=7;
+
+    int a{0};
+    cin>>a;
     cin.ignore();
-    getline(cin, a);
-    cout<<a<<endl;
+
+    cout<<pw(a,b)<<endl;
+
+
     return 0;
 
 }

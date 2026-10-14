@@ -1,6 +1,7 @@
 #include <iostream>
 #include <stdexcept>
 #include <string>
+#include <cmath>
 using namespace std;
 
 int sum(int a, int b) {
@@ -17,5 +18,10 @@ double divi(double a, double b) {
             throw invalid_argument("Division by zero is not allowed.");
     }
     return a / b;
+}
+
+int pw(int a, int b)
+{
+    return pow(a, b);
 }
 
