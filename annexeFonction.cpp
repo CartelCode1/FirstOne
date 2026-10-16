@@ -4,22 +4,22 @@
 #include <cmath>
 using namespace std;
 
-int sum(int a, int b) {
+int Sum(int a, int b) {
     return a + b;
 }
 
 
-int diff(int a, int b) {
+int Diff(int a, int b) {
     return a - b;
 }
 
 
-int mul(int a, int b) {
+int Mul(int a, int b) {
     return a * b;
 }
 
 
-double divi(double a, double b) {
+double Divi(double a, double b) {
     if (b == 0) {
             throw invalid_argument("Division by zero is not allowed.");
     }
@@ -32,7 +32,6 @@ int pw(int a, int b)
 {
     return pow(a, b);
 }
-
 
 
 long long factorial(int n)
@@ -76,18 +75,11 @@ auto convertisseurStringtoInt(string n)
 
 
 
-bool in(string c, string l)
+bool in(char c, string l)
 {
-    int m=sizeOfString(c);
     for(int i{0}; i<sizeOfString(l); i++){
-        if(l[i]==c[0]){
-            int j=1;//j'ia déjà comparé le terme en 0 de c 
-            while(j<m && l[i+j]==c[j] && i+j<sizeOfString(l)){
-                j++;
-            }
-            if(j==m){
+        if(l[i]==c){
                 return true;
-            }
         }
     }
     return false;
