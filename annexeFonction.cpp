@@ -2,24 +2,26 @@
 #include <stdexcept>
 #include <string>
 #include <cmath>
+#include "Annexe.hpp"
+
 using namespace std;
 
-int Sum(int a, int b) {
+int sum(int a, int b) {
     return a + b;
 }
 
 
-int Diff(int a, int b) {
+int diff(int a, int b) {
     return a - b;
 }
 
 
-int Mul(int a, int b) {
+int mul(int a, int b) {
     return a * b;
 }
 
 
-double Divi(double a, double b) {
+double divi(double a, double b) {
     if (b == 0) {
             throw invalid_argument("Division by zero is not allowed.");
     }
@@ -50,7 +52,7 @@ long long factorial(int n)
 
 
 
-int sizeOfString(string n)
+int sizeOfString(std::string n)
 {
     int a=0;
     for(int i{0}; n[i]!='\0'; i++){
@@ -62,7 +64,7 @@ int sizeOfString(string n)
 
 
 
-auto convertisseurStringtoInt(string n)
+int convertisseurStringtoInt(std::string n)
 {
     int a=0;
     int N=sizeOfString(n);
@@ -75,7 +77,7 @@ auto convertisseurStringtoInt(string n)
 
 
 
-bool in(char c, string l)
+bool in(char c, std::string l)
 {
     for(int i{0}; i<sizeOfString(l); i++){
         if(l[i]==c){

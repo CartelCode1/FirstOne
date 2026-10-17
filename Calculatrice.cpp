@@ -1,4 +1,5 @@
 #include "Annexe.hpp"
+#include "Calculatrice.hpp"
 #include <String>
 #include <vector>
 #include <iostream>
@@ -9,13 +10,13 @@ using namespace std;
 double calcul(double a, double b, char op) {
     switch (op) {
         case '+':
-            return Sum(a, b);
+            return sum(a, b);
         case '-':
-            return Diff(a, b);
+            return diff(a, b);
         case '*':
-            return Mul(a, b);
+            return mul(a, b);
         case '/':
-            return Divi(a, b);
+            return divi(a, b);
         case '^':
             return pw(a, b);
         default:
@@ -23,15 +24,15 @@ double calcul(double a, double b, char op) {
     }
 }
 
-auto getArgument(string s)
+std::vector<std::string> getArgument(string s)
 {
     int c=0;
-
+    int n=sizeOfString(s);
     vector<string> arguments ={"","",""};
     string op="*/-+^";
     string digit="0123456789";
 
-    for (int i=0; i < sizeOfString(s); i++)
+    for (int i=0; i < n; i++)
     {
        if (in(s[i],digit))
        {

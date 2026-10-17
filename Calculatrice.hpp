@@ -1,4 +1,10 @@
-#include "Calculatrice.cpp"
+#ifndef Calculatrice_HPP
+#define Calculatrice_HPP
 
+#include <string>
+#include <vector>
+#pragma once 
 double calcul(double a, double b, char op);
-auto getArgument(string s);
+std::vector<std::string> getArgument(std::string s);
+
+#endif 

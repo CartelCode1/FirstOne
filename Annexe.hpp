@@ -1,10 +1,28 @@
-#include "annexeFonction.cpp"
+#ifndef Annexe_HPP
+#define Annexe_HPP
+#pragma once
+#include <string>
+#include <vector>
 
-auto Sum(int a,int b)->int;
-int Diff(int a, int b);
-int Mul(int a, int b);
-double Divi(double a, double b);
+
+int sum(int a,int b);
+
+int diff(int a, int b);
+
+int mul(int a, int b);
+    
+double divi(double a, double b);
+
 int pw(int a, int b);
+
+
+int sizeOfString(std::string n);
+
+
 long long factorial(int n);
-auto convertisseurStringtoInt(string n);
-bool in(string c, string l);
+
+int convertisseurStringtoInt(std::string n);
+
+bool in(char c, std::string l);
+
+#endif 
